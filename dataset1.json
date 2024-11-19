@@ -1,0 +1,899 @@
+[
+    {
+        "name": "IIT Bombay",
+        "location": "Mumbai",
+        "type": "Public",
+        "rating": 4.9,
+        "courses": [
+            {
+                "name": "B.Tech Computer Science",
+                "duration": "4 years",
+                "annual_fee": 220000
+            },
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 220000
+            }
+        ],
+        "admission": {
+            "exam": "JEE Advanced",
+            "cutoff": {
+                "2023": 290,
+                "2022": 285,
+                "2021": 280
+            }
+        },
+        "placements": {
+            "average_package": 2500000,
+            "highest_package": 6000000,
+            "top_recruiters": ["Microsoft", "Google", "Amazon"]
+        },
+        "facilities": ["Wi-Fi campus", "Smart classrooms", "Advanced labs", "Sports complex", "Incubation center"]
+    },
+    {
+        "name": "Veermata Jijabai Technological Institute (VJTI)",
+        "location": "Mumbai",
+        "type": "Public",
+        "rating": 4.3,
+        "courses": [
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 81750
+            },
+            {
+                "name": "B.Tech Electrical Engineering",
+                "duration": "4 years",
+                "annual_fee": 81750
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 150,
+                "2022": 145,
+                "2021": 140
+            }
+        },
+        "placements": {
+            "average_package": 1000000,
+            "highest_package": 4400000,
+            "top_recruiters": ["TCS", "L&T", "Infosys"]
+        },
+        "facilities": ["Library", "Hostel", "Labs", "Sports"]
+    },
+    {
+        "name": "College of Engineering, Pune (COEP)",
+        "location": "Pune",
+        "type": "Public",
+        "rating": 4.6,
+        "courses": [
+            {
+                "name": "B.Tech Information Technology",
+                "duration": "4 years",
+                "annual_fee": 113000
+            },
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 113000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 150,
+                "2022": 145,
+                "2021": 140
+            }
+        },
+        "placements": {
+            "average_package": 1200000,
+            "highest_package": 3700000,
+            "top_recruiters": ["TCS", "Infosys", "Wipro"]
+        },
+        "facilities": ["Wi-Fi campus", "Incubation center", "Hostels", "Sports"]
+    },
+    {
+        "name": "Walchand College of Engineering",
+        "location": "Sangli",
+        "type": "Private",
+        "rating": 4.2,
+        "courses": [
+            {
+                "name": "B.Tech Civil Engineering",
+                "duration": "4 years",
+                "annual_fee": 84935
+            },
+            {
+                "name": "B.Tech Computer Science",
+                "duration": "4 years",
+                "annual_fee": 84935
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 140,
+                "2022": 135,
+                "2021": 130
+            }
+        },
+        "placements": {
+            "average_package": 500000,
+            "highest_package": 3700000,
+            "top_recruiters": ["Infosys", "TCS"]
+        },
+        "facilities": ["Wi-Fi", "Labs", "Sports"]
+    },
+    {
+        "name": "MIT World Peace University",
+        "location": "Pune",
+        "type": "Private",
+        "rating": 4.3,
+        "courses": [
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 310000
+            },
+            {
+                "name": "B.Tech Computer Science",
+                "duration": "4 years",
+                "annual_fee": 310000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 135,
+                "2022": 130,
+                "2021": 125
+            }
+        },
+        "placements": {
+            "average_package": 600000,
+            "highest_package": 1800000,
+            "top_recruiters": ["TCS", "Wipro", "Infosys"]
+        },
+        "facilities": ["Research Labs", "Wi-Fi Campus", "Sports Facilities"]
+    },
+    {
+        "name": "VIT Pune",
+        "location": "Pune",
+        "type": "Private",
+        "rating": 4.0,
+        "courses": [
+            {
+                "name": "B.Tech Computer Science",
+                "duration": "4 years",
+                "annual_fee": 164000
+            },
+            {
+                "name": "B.Tech Electrical Engineering",
+                "duration": "4 years",
+                "annual_fee": 164000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 135,
+                "2022": 130,
+                "2021": 125
+            }
+        },
+        "placements": {
+            "average_package": 700000,
+            "highest_package": 4400000,
+            "top_recruiters": ["Infosys", "TCS", "Wipro"]
+        },
+        "facilities": ["Labs", "Sports Facilities"]
+    },
+	{
+        "name": "Dwarkadas J Sanghvi College of Engineering",
+        "location": "Mumbai",
+        "type": "Private",
+        "rating": 4.2,
+        "courses": [
+            {
+                "name": "B.Tech Computer Science",
+                "duration": "4 years",
+                "annual_fee": 880000
+            },
+            {
+                "name": "B.Tech Electronics",
+                "duration": "4 years",
+                "annual_fee": 880000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 140,
+                "2022": 135,
+                "2021": 130
+            }
+        },
+        "placements": {
+            "average_package": 1000000,
+            "highest_package": 4000000,
+            "top_recruiters": ["JP Morgan", "Tata Motors", "Infosys"]
+        },
+        "facilities": ["Labs", "Modern Classrooms", "Library"]
+    },
+    {
+        "name": "Bharati Vidyapeeth Deemed University",
+        "location": "Pune",
+        "type": "Private",
+        "rating": 4.1,
+        "courses": [
+            {
+                "name": "B.Tech Electrical Engineering",
+                "duration": "4 years",
+                "annual_fee": 120000
+            },
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 120000
+            }
+        ],
+        "admission": {
+            "exam": "BVP CET",
+            "cutoff": {
+                "2023": 130,
+                "2022": 125,
+                "2021": 120
+            }
+        },
+        "placements": {
+            "average_package": 600000,
+            "highest_package": 1500000,
+            "top_recruiters": ["Infosys", "TCS"]
+        },
+        "facilities": ["Hostel", "Wi-Fi Campus", "Labs"]
+    },
+    {
+        "name": "Sardar Patel Institute of Technology (SPIT)",
+        "location": "Mumbai",
+        "type": "Private",
+        "rating": 4.5,
+        "courses": [
+            {
+                "name": "B.Tech IT",
+                "duration": "4 years",
+                "annual_fee": 178000
+            },
+            {
+                "name": "B.Tech Electronics",
+                "duration": "4 years",
+                "annual_fee": 178000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 140,
+                "2022": 135,
+                "2021": 130
+            }
+        },
+        "placements": {
+            "average_package": 1200000,
+            "highest_package": 3800000,
+            "top_recruiters": ["Microsoft", "Infosys", "TCS"]
+        },
+        "facilities": ["Labs", "Wi-Fi", "Hostels"]
+    },
+    {
+        "name": "Pune Institute of Computer Technology (PICT)",
+        "location": "Pune",
+        "type": "Private",
+        "rating": 4.3,
+        "courses": [
+            {
+                "name": "B.Tech Computer Science",
+                "duration": "4 years",
+                "annual_fee": 180000
+            },
+            {
+                "name": "B.Tech Information Technology",
+                "duration": "4 years",
+                "annual_fee": 180000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 135,
+                "2022": 130,
+                "2021": 125
+            }
+        },
+        "placements": {
+            "average_package": 800000,
+            "highest_package": 2200000,
+            "top_recruiters": ["Cognizant", "Infosys", "Wipro"]
+        },
+        "facilities": ["Labs", "Sports Facilities", "Wi-Fi Campus"]
+    },
+    {
+        "name": "Shri Ramdeobaba College of Engineering and Management",
+        "location": "Nagpur",
+        "type": "Private",
+        "rating": 4.1,
+        "courses": [
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 130000
+            },
+            {
+                "name": "B.Tech Civil Engineering",
+                "duration": "4 years",
+                "annual_fee": 130000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 135,
+                "2022": 130,
+                "2021": 125
+            }
+        },
+        "placements": {
+            "average_package": 700000,
+            "highest_package": 2200000,
+            "top_recruiters": ["Infosys", "Tata Motors", "Cognizant"]
+        },
+        "facilities": ["Wi-Fi Campus", "Labs", "Sports Facilities"]
+    },
+    {
+        "name": "Fr. C. Rodrigues Institute of Technology",
+        "location": "Navi Mumbai",
+        "type": "Private",
+        "rating": 4.0,
+        "courses": [
+            {
+                "name": "B.Tech Computer Engineering",
+                "duration": "4 years",
+                "annual_fee": 150000
+            },
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 150000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 140,
+                "2022": 135,
+                "2021": 130
+            }
+        },
+        "placements": {
+            "average_package": 700000,
+            "highest_package": 2200000,
+            "top_recruiters": ["TCS", "Wipro", "L&T"]
+        },
+        "facilities": ["Labs", "Sports Complex", "Wi-Fi"]
+    },
+    {
+        "name": "Vivekanand Education Society's Institute of Technology",
+        "location": "Mumbai",
+        "type": "Private",
+        "rating": 4.1,
+        "courses": [
+            {
+                "name": "B.Tech Electronics Engineering",
+                "duration": "4 years",
+                "annual_fee": 180000
+            },
+            {
+                "name": "B.Tech Computer Engineering",
+                "duration": "4 years",
+                "annual_fee": 180000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 135,
+                "2022": 130,
+                "2021": 125
+            }
+        },
+        "placements": {
+            "average_package": 800000,
+            "highest_package": 1500000,
+            "top_recruiters": ["Infosys", "TCS", "Cognizant"]
+        },
+        "facilities": ["Labs", "Wi-Fi", "Hostels"]
+    },
+    {
+        "name": "Sinhgad College of Engineering",
+        "location": "Pune",
+        "type": "Private",
+        "rating": 4.2,
+        "courses": [
+            {
+                "name": "B.Tech Information Technology",
+                "duration": "4 years",
+                "annual_fee": 150000
+            },
+            {
+                "name": "B.Tech Civil Engineering",
+                "duration": "4 years",
+                "annual_fee": 150000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 135,
+                "2022": 130,
+                "2021": 125
+            }
+        },
+        "placements": {
+            "average_package": 700000,
+            "highest_package": 2000000,
+            "top_recruiters": ["Infosys", "Cognizant", "Wipro"]
+        },
+        "facilities": ["Labs", "Hostel", "Sports"]
+    },
+    {
+        "name": "Datta Meghe College of Engineering",
+        "location": "Mumbai",
+        "type": "Private",
+        "rating": 4.1,
+        "courses": [
+            {
+                "name": "B.Tech Civil Engineering",
+                "duration": "4 years",
+                "annual_fee": 140000
+            },
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 140000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 140,
+                "2022": 135,
+                "2021": 130
+            }
+        },
+        "placements": {
+            "average_package": 650000,
+            "highest_package": 1800000,
+            "top_recruiters": ["TCS", "L&T", "Infosys"]
+        },
+        "facilities": ["Wi-Fi", "Labs", "Hostels"]
+    },
+	{
+        "name": "Rajiv Gandhi Institute of Technology",
+        "location": "Mumbai",
+        "type": "Private",
+        "rating": 4.0,
+        "courses": [
+            {
+                "name": "B.Tech Computer Science",
+                "duration": "4 years",
+                "annual_fee": 145000
+            },
+            {
+                "name": "B.Tech Civil Engineering",
+                "duration": "4 years",
+                "annual_fee": 145000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 130,
+                "2022": 125,
+                "2021": 120
+            }
+        },
+        "placements": {
+            "average_package": 600000,
+            "highest_package": 1800000,
+            "top_recruiters": ["TCS", "Infosys", "L&T"]
+        },
+        "facilities": ["Labs", "Wi-Fi", "Hostels"]
+    },
+    {
+        "name": "KJ Somaiya College of Engineering",
+        "location": "Mumbai",
+        "type": "Private",
+        "rating": 4.4,
+        "courses": [
+            {
+                "name": "B.Tech Electronics",
+                "duration": "4 years",
+                "annual_fee": 280000
+            },
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 280000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 145,
+                "2022": 140,
+                "2021": 135
+            }
+        },
+        "placements": {
+            "average_package": 800000,
+            "highest_package": 2200000,
+            "top_recruiters": ["Infosys", "Accenture", "TCS"]
+        },
+        "facilities": ["Labs", "Wi-Fi", "Sports"]
+    },
+    {
+        "name": "SIES Graduate School of Technology",
+        "location": "Navi Mumbai",
+        "type": "Private",
+        "rating": 4.0,
+        "courses": [
+            {
+                "name": "B.Tech Information Technology",
+                "duration": "4 years",
+                "annual_fee": 140000
+            },
+            {
+                "name": "B.Tech Computer Engineering",
+                "duration": "4 years",
+                "annual_fee": 140000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 130,
+                "2022": 125,
+                "2021": 120
+            }
+        },
+        "placements": {
+            "average_package": 700000,
+            "highest_package": 1600000,
+            "top_recruiters": ["Infosys", "TCS", "Wipro"]
+        },
+        "facilities": ["Labs", "Wi-Fi", "Sports"]
+    },
+    {
+        "name": "Don Bosco Institute of Technology",
+        "location": "Mumbai",
+        "type": "Private",
+        "rating": 4.1,
+        "courses": [
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 165000
+            },
+            {
+                "name": "B.Tech Electronics Engineering",
+                "duration": "4 years",
+                "annual_fee": 165000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 140,
+                "2022": 135,
+                "2021": 130
+            }
+        },
+        "placements": {
+            "average_package": 600000,
+            "highest_package": 1800000,
+            "top_recruiters": ["Infosys", "TCS", "Accenture"]
+        },
+        "facilities": ["Wi-Fi", "Labs", "Hostels"]
+    },
+    {
+        "name": "Atharva College of Engineering",
+        "location": "Mumbai",
+        "type": "Private",
+        "rating": 4.0,
+        "courses": [
+            {
+                "name": "B.Tech Computer Science",
+                "duration": "4 years",
+                "annual_fee": 145000
+            },
+            {
+                "name": "B.Tech Information Technology",
+                "duration": "4 years",
+                "annual_fee": 145000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 135,
+                "2022": 130,
+                "2021": 125
+            }
+        },
+        "placements": {
+            "average_package": 700000,
+            "highest_package": 1600000,
+            "top_recruiters": ["Infosys", "TCS", "Wipro"]
+        },
+        "facilities": ["Wi-Fi", "Labs", "Hostels"]
+    },
+    {
+        "name": "AISSMS College of Engineering",
+        "location": "Pune",
+        "type": "Private",
+        "rating": 4.2,
+        "courses": [
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 120000
+            },
+            {
+                "name": "B.Tech Electronics Engineering",
+                "duration": "4 years",
+                "annual_fee": 120000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 130,
+                "2022": 125,
+                "2021": 120
+            }
+        },
+        "placements": {
+            "average_package": 650000,
+            "highest_package": 1500000,
+            "top_recruiters": ["Infosys", "Wipro", "Cognizant"]
+        },
+        "facilities": ["Wi-Fi", "Labs", "Sports"]
+    },
+    {
+        "name": "Vidyalankar Institute of Technology",
+        "location": "Mumbai",
+        "type": "Private",
+        "rating": 4.1,
+        "courses": [
+            {
+                "name": "B.Tech Computer Engineering",
+                "duration": "4 years",
+                "annual_fee": 180000
+            },
+            {
+                "name": "B.Tech IT Engineering",
+                "duration": "4 years",
+                "annual_fee": 180000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 140,
+                "2022": 135,
+                "2021": 130
+            }
+        },
+        "placements": {
+            "average_package": 800000,
+            "highest_package": 1600000,
+            "top_recruiters": ["Infosys", "TCS", "Accenture"]
+        },
+        "facilities": ["Wi-Fi", "Labs", "Hostels"]
+    },
+    {
+        "name": "KJ Somaiya Institute of Engineering and Information Technology",
+        "location": "Mumbai",
+        "type": "Private",
+        "rating": 4.1,
+        "courses": [
+            {
+                "name": "B.Tech Computer Science",
+                "duration": "4 years",
+                "annual_fee": 145000
+            },
+            {
+                "name": "B.Tech Electronics",
+                "duration": "4 years",
+                "annual_fee": 145000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 130,
+                "2022": 125,
+                "2021": 120
+            }
+        },
+        "placements": {
+            "average_package": 650000,
+            "highest_package": 1800000,
+            "top_recruiters": ["Infosys", "TCS", "Accenture"]
+        },
+        "facilities": ["Wi-Fi", "Labs", "Sports"]
+    },
+    {
+        "name": "Rajiv Gandhi College of Engineering and Research",
+        "location": "Nagpur",
+        "type": "Private",
+        "rating": 4.0,
+        "courses": [
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 120000
+            },
+            {
+                "name": "B.Tech Electrical Engineering",
+                "duration": "4 years",
+                "annual_fee": 120000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 130,
+                "2022": 125,
+                "2021": 120
+            }
+        },
+        "placements": {
+            "average_package": 600000,
+            "highest_package": 1500000,
+            "top_recruiters": ["Infosys", "TCS", "Accenture"]
+        },
+        "facilities": ["Wi-Fi", "Labs", "Sports"]
+    },
+	{
+        "name": "Indira College of Engineering and Management",
+        "location": "Pune",
+        "type": "Private",
+        "rating": 4.1,
+        "courses": [
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 140000
+            },
+            {
+                "name": "B.Tech Computer Engineering",
+                "duration": "4 years",
+                "annual_fee": 140000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 125,
+                "2022": 120,
+                "2021": 115
+            }
+        },
+        "placements": {
+            "average_package": 700000,
+            "highest_package": 1600000,
+            "top_recruiters": ["Infosys", "Wipro", "TCS"]
+        },
+        "facilities": ["Wi-Fi", "Sports", "Labs"]
+    },
+    {
+        "name": "D Y Patil College of Engineering",
+        "location": "Pune",
+        "type": "Private",
+        "rating": 4.0,
+        "courses": [
+            {
+                "name": "B.Tech Civil Engineering",
+                "duration": "4 years",
+                "annual_fee": 160000
+            },
+            {
+                "name": "B.Tech Mechanical Engineering",
+                "duration": "4 years",
+                "annual_fee": 160000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 130,
+                "2022": 125,
+                "2021": 120
+            }
+        },
+        "placements": {
+            "average_package": 700000,
+            "highest_package": 1800000,
+            "top_recruiters": ["Infosys", "TCS", "L&T"]
+        },
+        "facilities": ["Wi-Fi", "Library", "Sports"]
+    },
+    {
+        "name": "Priyadarshini College of Engineering",
+        "location": "Nagpur",
+        "type": "Private",
+        "rating": 4.0,
+        "courses": [
+            {
+                "name": "B.Tech Electrical Engineering",
+                "duration": "4 years",
+                "annual_fee": 110000
+            },
+            {
+                "name": "B.Tech Computer Engineering",
+                "duration": "4 years",
+                "annual_fee": 110000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 120,
+                "2022": 115,
+                "2021": 110
+            }
+        },
+        "placements": {
+            "average_package": 600000,
+            "highest_package": 1500000,
+            "top_recruiters": ["Wipro", "TCS", "Cognizant"]
+        },
+        "facilities": ["Wi-Fi", "Hostel", "Labs"]
+    },
+    {
+        "name": "Vidya Pratishthan's College of Engineering",
+        "location": "Baramati",
+        "type": "Private",
+        "rating": 4.0,
+        "courses": [
+            {
+                "name": "B.Tech Electronics Engineering",
+                "duration": "4 years",
+                "annual_fee": 100000
+            },
+            {
+                "name": "B.Tech Information Technology",
+                "duration": "4 years",
+                "annual_fee": 100000
+            }
+        ],
+        "admission": {
+            "exam": "MHT-CET",
+            "cutoff": {
+                "2023": 125,
+                "2022": 120,
+                "2021": 115
+            }
+        },
+        "placements": {
+            "average_package": 500000,
+            "highest_package": 1200000,
+            "top_recruiters": ["Infosys", "L&T", "TCS"]
+        },
+        "facilities": ["Wi-Fi", "Sports", "Hostel"]
+    }
+]
+
