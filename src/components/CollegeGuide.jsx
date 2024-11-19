@@ -6,12 +6,19 @@ import About from './About';
 import Features from './Features';
 import Contact from './Contact';
 import ChatPage from './Chatpage';
+import Chatbot from './Chatbot';
+import { MessageCircle, X } from 'lucide-react';
+import VITPuneImage from './VIT-Pune.webp';
+import VJTIImage from './VJTI.jpg';
+import COEPImage from './COEP-Pune-1.webp';
+
+
 
 const CollegeGuide = () => {
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
-
+  const [isChatOpen, setIsChatOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -31,7 +38,7 @@ const CollegeGuide = () => {
         '100% Placement',
         'NAAC A+'
       ],
-      image: '/api/placeholder/400/250',
+      image: COEPImage,
       tags: ['Engineering', 'Autonomous'],
       courses: ['Computer Science', 'Mechanical', 'Electronics']
     },
@@ -44,20 +51,20 @@ const CollegeGuide = () => {
         '95% Placement',
         'NBA Accredited'
       ],
-      image: '/api/placeholder/400/250',
+      image: VJTIImage,
       tags: ['Engineering', 'Research'],
       courses: ['IT', 'Civil', 'Chemical']
     },
     {
-      name: 'SPIT Mumbai',
+      name: 'VIT Pune',
       description: 'Specialized in Computer & IT education',
       rating: 4.6,
       details: [
-        'Est. 1995',
+        'Est. 1983',
         '98% Placement',
         'ISO Certified'
       ],
-      image: '/api/placeholder/400/250',
+      image: VITPuneImage,
       tags: ['IT', 'Computer Science'],
       courses: ['AI/ML', 'Data Science', 'IoT']
     }
@@ -302,6 +309,54 @@ const CollegeGuide = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/chat" element={<ChatPage />} /> 
       </Routes>
+      {/* Floating Chat Button */}
+      <button
+        onClick={() => setIsChatOpen(true)}
+        className={`fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 z-50 group ${
+          isChatOpen ? 'scale-0' : 'scale-100'
+        }`}
+      >
+        <MessageCircle className="w-6 h-6" />
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-4 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+          Chat with us
+        </span>
+      </button>
+
+      {/* Chat Modal */}
+      {isChatOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-end justify-end p-4 md:p-6 z-50">
+          <div className="w-full max-w-[400px] h-[600px] bg-white rounded-xl shadow-2xl transform transition-all duration-300 animate-slide-up">
+            <div className="absolute top-2 right-2">
+              <button
+                onClick={() => setIsChatOpen(false)}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              >
+                <X className="w-5 h-5 text-gray-500" />
+              </button>
+            </div>
+            <div className="h-full">
+              <Chatbot />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Animation Styles */}
+      <style jsx>{`
+        @keyframes slide-up {
+          from {
+            opacity: 0;
+            transform: translateY(100%);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-slide-up {
+          animation: slide-up 0.3s ease-out;
+        }
+      `}</style>
     </div>
   );
 };
