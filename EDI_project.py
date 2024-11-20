@@ -10,6 +10,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  # Enable CORS for cross-origin requests
 
+
 # Cohere API setup
 cohere_api_key = 'TsY1cWlAAL00usoIgNEeHLxkiYO9vzSSwzZQKppW'  # Replace with your actual API key
 co = cohere.Client(cohere_api_key)
@@ -184,6 +185,7 @@ def find_best_college_and_branch(eligible_entries):
     }
 
 # Generate best college response
+import re
 def generate_best_college_response(best_entry, language):
     if not best_entry:
         if language == 'hinglish':
@@ -194,8 +196,8 @@ def generate_best_college_response(best_entry, language):
     # Generate an explanation using Cohere
     prompt = (
         f"Why is {best_entry['college']} the best choice for the branch {best_entry['branch']}? "
-        f"The college has a rating of {best_entry['rating']}/5. Highlight its academic reputation, "
-        f"facilities, and other notable features."
+        f"The college has a rating of {best_entry['rating']}/5. Use bold text for section headers like 'Academic Reputation:' "
+        f"and highlight its academic reputation, facilities, and other notable features."
     )
     response = co.generate(
         model="command-xlarge-nightly",
@@ -205,8 +207,16 @@ def generate_best_college_response(best_entry, language):
     )
     explanation = response.generations[0].text.strip()
 
+    # Handle both standard bold markdown (**text**) and section headers
+    explanation = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', explanation)
+    explanation = re.sub(r'##\s*(.*?):', r'<strong>\1:</strong>', explanation)
+    
+    # Ensure section headers like "Academic Reputation:" are bold
+    explanation = re.sub(r'([A-Za-z\s]+):', r'<strong>\1:</strong>', explanation)
+
     if language == 'hinglish':
-        return f"{best_entry['college']} branch {best_entry['branch']} ke saath sabse acha college hai.\n\n{translate_text('en', 'hi', explanation)}"
+        translated_explanation = translate_text('en', 'hi', explanation)
+        return f"{best_entry['college']} branch {best_entry['branch']} ke saath sabse acha college hai.\n\n{translated_explanation}"
     else:
         return f"The best college is {best_entry['college']} with branch {best_entry['branch']}.\n\n{explanation}"
 
@@ -255,10 +265,35 @@ def generate_cutoff_response(branch_cutoffs, college_name, language='english'):
         else:
             return "Sorry, cutoff details for this branch are not available."
 
-    response = f"Cutoff details for {college_name}:\n"
-    for branch in branch_cutoffs:
-        cutoff_details = ", ".join(f"{key}: {value}" for key, value in branch['cutoff'].items())
-        response += f"{branch['branch']}: {cutoff_details}\n"
+    # Create response with HTML formatting
+    response = f"""<div class='cutoff-container'>
+    <h3 class='college-name'>Cutoff Details for {college_name}</h3>
+    <div class='branches-container'>"""
+
+    # Sort branches alphabetically
+    sorted_branches = sorted(branch_cutoffs, key=lambda x: x['branch'])
+
+    for branch in sorted_branches:
+        response += f"""
+        <div class='branch-item'>
+            <h4 class='branch-name'>{branch['branch']}</h4>
+            <div class='cutoff-details'>"""
+        
+        for category, rank in branch['cutoff'].items():
+            formatted_rank = f"{rank:,}"
+            response += f"""
+                <div class='category-item'>
+                    <span class='category'>{category}:</span>
+                    <span class='rank'>{formatted_rank}</span>
+                </div>"""
+        
+        response += """
+            </div>
+        </div>"""
+
+    response += """
+    </div>
+</div>"""
 
     return response
 
@@ -281,14 +316,14 @@ def generate_dynamic_response_college(intent, college_data, language='english', 
         else:
             return f"The fees for {college_data['name']} are:\n{fees_info}"
 
-    elif intent == 'highest_package':
+    elif intent == 'highest_package' or intent=='highest_salary':
         highest_package = college_data['placements']['highest_package']
         if language == 'hinglish':
             return f"{college_data['name']} ka highest package ₹{highest_package:,}/saal hai."
         else:
             return f"The highest package for {college_data['name']} is ₹{highest_package:,}/year."
 
-    elif intent == 'average_package':
+    elif intent == 'average_package' or intent=='highest_salary':
         avg_package = college_data['placements']['average_package']
         if language == 'hinglish':
             return f"{college_data['name']} ka average package ₹{avg_package:,}/saal hai."

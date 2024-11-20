@@ -1,0 +1,199 @@
+2024-11-20 16:24:53,822 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-11-20 16:24:53,822 - httpx - DEBUG - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-11-20 16:24:53,829 - werkzeug - WARNING -  * Debugger is active!
+2024-11-20 16:24:53,844 - werkzeug - INFO -  * Debugger PIN: 271-071-340
+2024-11-20 16:25:46,043 - werkzeug - INFO -  * Detected change in '/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py', reloading
+2024-11-20 16:25:47,991 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-11-20 16:25:47,991 - httpx - DEBUG - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-11-20 16:25:47,999 - werkzeug - WARNING -  * Debugger is active!
+2024-11-20 16:25:48,012 - werkzeug - INFO -  * Debugger PIN: 271-071-340
+2024-11-20 16:26:39,192 - werkzeug - INFO -  * Detected change in '/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py', reloading
+2024-11-20 16:26:41,210 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-11-20 16:26:41,210 - httpx - DEBUG - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-11-20 16:26:41,217 - werkzeug - WARNING -  * Debugger is active!
+2024-11-20 16:26:41,231 - werkzeug - INFO -  * Debugger PIN: 271-071-340
+2024-11-20 16:26:54,066 - werkzeug - INFO -  * Detected change in '/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py', reloading
+2024-11-20 16:26:56,098 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-11-20 16:26:56,099 - httpx - DEBUG - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-11-20 16:26:56,107 - werkzeug - WARNING -  * Debugger is active!
+2024-11-20 16:26:56,154 - werkzeug - INFO -  * Debugger PIN: 271-071-340
+2024-11-20 16:29:56,375 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2024 16:29:56] "OPTIONS /chat HTTP/1.1" 200 -
+2024-11-20 16:29:56,381 - __main__ - INFO - Chat endpoint hit!
+2024-11-20 16:29:56,381 - __main__ - INFO - Processing query: which colleges can i get for GOPEN rank 500
+2024-11-20 16:29:56,383 - __main__ - INFO - Processing query through NLP pipeline
+2024-11-20 16:29:56,383 - __main__ - INFO - Starting query processing
+2024-11-20 16:29:56,383 - __main__ - INFO - Detected language: english
+2024-11-20 16:29:56,385 - httpcore.connection - DEBUG - connect_tcp.started host='api.cohere.com' port=443 local_address=None timeout=300 socket_options=None
+2024-11-20 16:29:56,421 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x15349cdd0>
+2024-11-20 16:29:56,421 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x153b7cef0> server_hostname='api.cohere.com' timeout=300
+2024-11-20 16:29:56,437 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x153482d10>
+2024-11-20 16:29:56,437 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-11-20 16:29:56,437 - httpcore.http11 - DEBUG - send_request_headers.complete
+2024-11-20 16:29:56,438 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-11-20 16:29:56,438 - httpcore.http11 - DEBUG - send_request_body.complete
+2024-11-20 16:29:56,438 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-11-20 16:29:58,357 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'768'), (b'num_tokens', b'203'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'f110c96fcb6b01c1836dc46a1654c4ca'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'39'), (b'date', b'Wed, 20 Nov 2024 10:59:58 GMT'), (b'Content-Length', b'1070'), (b'x-envoy-upstream-service-time', b'1634'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+2024-11-20 16:29:58,359 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-11-20 16:29:58,359 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-11-20 16:29:58,360 - httpcore.http11 - DEBUG - receive_response_body.complete
+2024-11-20 16:29:58,360 - httpcore.http11 - DEBUG - response_closed.started
+2024-11-20 16:29:58,360 - httpcore.http11 - DEBUG - response_closed.complete
+2024-11-20 16:29:58,366 - __main__ - DEBUG - Cohere eligibility response: {"intent": "eligibility","college_name": "None","branch": "None","year": "None","rank": 500,"category": "None"}
+2024-11-20 16:29:58,366 - __main__ - DEBUG - Parsed eligibility data: {'intent': 'eligibility', 'college_name': 'None', 'branch': 'None', 'year': 'None', 'rank': 500, 'category': 'None'}
+2024-11-20 16:29:58,366 - __main__ - INFO - Processing eligibility query
+2024-11-20 16:29:58,366 - __main__ - ERROR - Error processing query: 'int' object has no attribute 'lower'
+Traceback (most recent call last):
+  File "/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py", line 412, in process_user_query
+    rank = parse_rank(parsed_data_eligibility.get('rank'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py", line 456, in parse_rank
+    if rank_str and rank_str.lower() != 'none':
+                    ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'lower'
+2024-11-20 16:29:58,368 - __main__ - ERROR - Error in chat endpoint: 'int' object has no attribute 'lower'
+Traceback (most recent call last):
+  File "/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py", line 498, in chat
+    response = process_user_query(user_query, dataset)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py", line 412, in process_user_query
+    rank = parse_rank(parsed_data_eligibility.get('rank'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py", line 456, in parse_rank
+    if rank_str and rank_str.lower() != 'none':
+                    ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'lower'
+2024-11-20 16:29:58,371 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2024 16:29:58] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2024-11-20 16:31:44,893 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2024 16:31:44] "OPTIONS /chat HTTP/1.1" 200 -
+2024-11-20 16:31:44,897 - __main__ - INFO - Chat endpoint hit!
+2024-11-20 16:31:44,897 - __main__ - INFO - Processing query: which colleges can i get for GOEPN rank 500
+2024-11-20 16:31:44,898 - __main__ - INFO - Processing query through NLP pipeline
+2024-11-20 16:31:44,898 - __main__ - INFO - Starting query processing
+2024-11-20 16:31:44,899 - __main__ - INFO - Detected language: english
+2024-11-20 16:31:44,900 - httpcore.connection - DEBUG - close.started
+2024-11-20 16:31:44,900 - httpcore.connection - DEBUG - close.complete
+2024-11-20 16:31:44,901 - httpcore.connection - DEBUG - connect_tcp.started host='api.cohere.com' port=443 local_address=None timeout=300 socket_options=None
+2024-11-20 16:31:44,910 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x153d37fd0>
+2024-11-20 16:31:44,911 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x153b7cef0> server_hostname='api.cohere.com' timeout=300
+2024-11-20 16:31:44,924 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x153d80110>
+2024-11-20 16:31:44,925 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-11-20 16:31:44,926 - httpcore.http11 - DEBUG - send_request_headers.complete
+2024-11-20 16:31:44,926 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-11-20 16:31:44,926 - httpcore.http11 - DEBUG - send_request_body.complete
+2024-11-20 16:31:44,926 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-11-20 16:31:46,840 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'768'), (b'num_tokens', b'204'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'8e2c4b794a46bf18014501f2393fab44'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'31'), (b'date', b'Wed, 20 Nov 2024 11:01:46 GMT'), (b'Content-Length', b'1070'), (b'x-envoy-upstream-service-time', b'1626'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+2024-11-20 16:31:46,846 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-11-20 16:31:46,846 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-11-20 16:31:46,847 - httpcore.http11 - DEBUG - receive_response_body.complete
+2024-11-20 16:31:46,847 - httpcore.http11 - DEBUG - response_closed.started
+2024-11-20 16:31:46,847 - httpcore.http11 - DEBUG - response_closed.complete
+2024-11-20 16:31:46,849 - __main__ - DEBUG - Cohere eligibility response: {"intent": "eligibility","college_name": "None","branch": "None","year": "None","rank": 500,"category": "None"}
+2024-11-20 16:31:46,849 - __main__ - DEBUG - Parsed eligibility data: {'intent': 'eligibility', 'college_name': 'None', 'branch': 'None', 'year': 'None', 'rank': 500, 'category': 'None'}
+2024-11-20 16:31:46,849 - __main__ - INFO - Processing eligibility query
+2024-11-20 16:31:46,849 - __main__ - ERROR - Error processing query: 'int' object has no attribute 'lower'
+Traceback (most recent call last):
+  File "/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py", line 412, in process_user_query
+    rank = parse_rank(parsed_data_eligibility.get('rank'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py", line 456, in parse_rank
+    if rank_str and rank_str.lower() != 'none':
+                    ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'lower'
+2024-11-20 16:31:46,850 - __main__ - ERROR - Error in chat endpoint: 'int' object has no attribute 'lower'
+Traceback (most recent call last):
+  File "/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py", line 498, in chat
+    response = process_user_query(user_query, dataset)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py", line 412, in process_user_query
+    rank = parse_rank(parsed_data_eligibility.get('rank'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py", line 456, in parse_rank
+    if rank_str and rank_str.lower() != 'none':
+                    ^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'lower'
+2024-11-20 16:31:46,851 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2024 16:31:46] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2024-11-20 16:31:56,523 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-11-20 16:31:56,523 - httpx - DEBUG - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-11-20 16:31:56,539 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.0.169:5001
+2024-11-20 16:31:56,539 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-20 16:31:56,539 - werkzeug - INFO -  * Restarting with stat
+2024-11-20 16:31:57,781 - httpx - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-11-20 16:31:57,781 - httpx - DEBUG - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/certifi/cacert.pem'
+2024-11-20 16:31:57,787 - werkzeug - WARNING -  * Debugger is active!
+2024-11-20 16:31:57,802 - werkzeug - INFO -  * Debugger PIN: 271-071-340
+2024-11-20 16:32:03,111 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2024 16:32:03] "OPTIONS /chat HTTP/1.1" 200 -
+2024-11-20 16:32:03,115 - __main__ - INFO - Chat endpoint hit!
+2024-11-20 16:32:03,115 - __main__ - INFO - Processing query: coep
+2024-11-20 16:32:03,117 - __main__ - INFO - Processing query through NLP pipeline
+2024-11-20 16:32:03,117 - __main__ - INFO - Starting query processing
+2024-11-20 16:32:03,117 - __main__ - INFO - Detected language: english
+2024-11-20 16:32:03,119 - httpcore.connection - DEBUG - connect_tcp.started host='api.cohere.com' port=443 local_address=None timeout=300 socket_options=None
+2024-11-20 16:32:03,133 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x11fabfd10>
+2024-11-20 16:32:03,133 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x13057cef0> server_hostname='api.cohere.com' timeout=300
+2024-11-20 16:32:03,146 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1301c0d10>
+2024-11-20 16:32:03,146 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-11-20 16:32:03,147 - httpcore.http11 - DEBUG - send_request_headers.complete
+2024-11-20 16:32:03,147 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-11-20 16:32:03,147 - httpcore.http11 - DEBUG - send_request_body.complete
+2024-11-20 16:32:03,147 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-11-20 16:32:07,293 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'749'), (b'num_tokens', b'193'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'1b17e862bc38736646b344c574eaba6a'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'34'), (b'date', b'Wed, 20 Nov 2024 11:02:07 GMT'), (b'Content-Length', b'1053'), (b'x-envoy-upstream-service-time', b'3861'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+2024-11-20 16:32:07,294 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-11-20 16:32:07,294 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-11-20 16:32:07,294 - httpcore.http11 - DEBUG - receive_response_body.complete
+2024-11-20 16:32:07,295 - httpcore.http11 - DEBUG - response_closed.started
+2024-11-20 16:32:07,295 - httpcore.http11 - DEBUG - response_closed.complete
+2024-11-20 16:32:07,302 - __main__ - DEBUG - Cohere eligibility response: {"intent": "info","college_name": "College of Engineering, Pune","branch": "None","year": "None","rank": "None","category": "None"}
+2024-11-20 16:32:07,302 - __main__ - DEBUG - Parsed eligibility data: {'intent': 'info', 'college_name': 'College of Engineering, Pune', 'branch': 'None', 'year': 'None', 'rank': 'None', 'category': 'None'}
+2024-11-20 16:32:07,302 - __main__ - INFO - Processing as regular college query
+2024-11-20 16:32:07,303 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-11-20 16:32:07,304 - httpcore.http11 - DEBUG - send_request_headers.complete
+2024-11-20 16:32:07,304 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-11-20 16:32:07,304 - httpcore.http11 - DEBUG - send_request_body.complete
+2024-11-20 16:32:07,304 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-11-20 16:32:08,431 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'402'), (b'num_tokens', b'103'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'608b5a6ed761efc3a1e339ce4f0d19f3'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'34'), (b'date', b'Wed, 20 Nov 2024 11:02:08 GMT'), (b'Content-Length', b'659'), (b'x-envoy-upstream-service-time', b'846'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+2024-11-20 16:32:08,431 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-11-20 16:32:08,431 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-11-20 16:32:08,432 - httpcore.http11 - DEBUG - receive_response_body.complete
+2024-11-20 16:32:08,432 - httpcore.http11 - DEBUG - response_closed.started
+2024-11-20 16:32:08,432 - httpcore.http11 - DEBUG - response_closed.complete
+2024-11-20 16:32:08,434 - __main__ - INFO - Successfully generated response: College of Engineering, Pune (COEP) is located in Pune, has a rating of 4.6/5. Facilities include: W...
+2024-11-20 16:32:08,435 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2024 16:32:08] "POST /chat HTTP/1.1" 200 -
+2024-11-20 16:32:19,251 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2024 16:32:19] "OPTIONS /chat HTTP/1.1" 200 -
+2024-11-20 16:32:19,254 - __main__ - INFO - Chat endpoint hit!
+2024-11-20 16:32:19,254 - __main__ - INFO - Processing query: which colleges can i get for GOEP 5000 rank
+2024-11-20 16:32:19,256 - __main__ - INFO - Processing query through NLP pipeline
+2024-11-20 16:32:19,256 - __main__ - INFO - Starting query processing
+2024-11-20 16:32:19,256 - __main__ - INFO - Detected language: english
+2024-11-20 16:32:19,257 - httpcore.connection - DEBUG - close.started
+2024-11-20 16:32:19,257 - httpcore.connection - DEBUG - close.complete
+2024-11-20 16:32:19,257 - httpcore.connection - DEBUG - connect_tcp.started host='api.cohere.com' port=443 local_address=None timeout=300 socket_options=None
+2024-11-20 16:32:19,267 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x130615350>
+2024-11-20 16:32:19,268 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x13057cef0> server_hostname='api.cohere.com' timeout=300
+2024-11-20 16:32:19,280 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x11facd950>
+2024-11-20 16:32:19,280 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2024-11-20 16:32:19,281 - httpcore.http11 - DEBUG - send_request_headers.complete
+2024-11-20 16:32:19,281 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2024-11-20 16:32:19,281 - httpcore.http11 - DEBUG - send_request_body.complete
+2024-11-20 16:32:19,282 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2024-11-20 16:32:21,183 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'access-control-expose-headers', b'X-Debug-Trace-ID'), (b'cache-control', b'no-cache, no-store, no-transform, must-revalidate, private, max-age=0'), (b'content-type', b'application/json'), (b'expires', b'Thu, 01 Jan 1970 00:00:00 UTC'), (b'num_chars', b'771'), (b'num_tokens', b'205'), (b'pragma', b'no-cache'), (b'vary', b'Origin'), (b'x-accel-expires', b'0'), (b'x-api-warning', b'unknown field: parameter model is not a valid field'), (b'x-debug-trace-id', b'5be9a23e03a49b3aff806f2149911085'), (b'x-endpoint-monthly-call-limit', b'1000'), (b'x-trial-endpoint-call-limit', b'40'), (b'x-trial-endpoint-call-remaining', b'36'), (b'date', b'Wed, 20 Nov 2024 11:02:21 GMT'), (b'Content-Length', b'1075'), (b'x-envoy-upstream-service-time', b'1620'), (b'server', b'envoy'), (b'Via', b'1.1 google'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000')])
+2024-11-20 16:32:21,184 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/generate "HTTP/1.1 200 OK"
+2024-11-20 16:32:21,188 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2024-11-20 16:32:21,189 - httpcore.http11 - DEBUG - receive_response_body.complete
+2024-11-20 16:32:21,189 - httpcore.http11 - DEBUG - response_closed.started
+2024-11-20 16:32:21,190 - httpcore.http11 - DEBUG - response_closed.complete
+2024-11-20 16:32:21,191 - __main__ - DEBUG - Cohere eligibility response: {"intent": "eligibility","college_name": "None","branch": "None","year": "None","rank": "5000","category": "None"}
+2024-11-20 16:32:21,192 - __main__ - DEBUG - Parsed eligibility data: {'intent': 'eligibility', 'college_name': 'None', 'branch': 'None', 'year': 'None', 'rank': '5000', 'category': 'None'}
+2024-11-20 16:32:21,192 - __main__ - INFO - Processing eligibility query
+2024-11-20 16:32:21,192 - __main__ - INFO - Successfully generated response: Eligible colleges and top branches:
+
+College of Engineering, Pune (COEP)
+- B.Tech Metallurgy and Mat...
+2024-11-20 16:32:21,193 - werkzeug - INFO - 127.0.0.1 - - [20/Nov/2024 16:32:21] "POST /chat HTTP/1.1" 200 -
+2024-11-20 16:32:51,066 - werkzeug - INFO -  * Detected change in '/Users/anuragdeshmukh/Everything/test project/newapp/EDI_project.py', reloading
+2024-11-20 16:32:51,494 - werkzeug - INFO -  * Restarting with stat
+2024-11-20 16:38:38,359 - werkzeug - INFO -  * Restarting with stat
+2024-11-20 16:38:53,206 - werkzeug - INFO -  * Restarting with stat
+2024-11-20 16:40:00,146 - werkzeug - INFO -  * Restarting with stat
+2024-11-20 16:40:11,601 - werkzeug - INFO -  * Restarting with stat

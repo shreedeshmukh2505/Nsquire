@@ -2,6 +2,70 @@ import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { Send, Loader, RefreshCw, Download, Trash2, AlertCircle } from "lucide-react";
 
+const styles = `
+.cutoff-container {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.college-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a365d;
+  padding: 1rem;
+  background: #e2e8f0;
+  margin: 0;
+}
+
+.branches-container {
+  padding: 1rem;
+}
+
+.branch-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+.branch-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.branch-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.cutoff-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  background: #f7fafc;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.category {
+  font-weight: 500;
+  margin-right: 0.5rem;
+  color: #4a5568;
+}
+
+.rank {
+  color: #2b6cb0;
+  font-weight: 600;
+}
+`;
+
 function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -12,10 +76,19 @@ function Chatbot() {
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+  
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    const styleSheet = document.createElement("style");
+    styleSheet.textContent = styles;
+    document.head.appendChild(styleSheet);
+    return () => document.head.removeChild(styleSheet);
+  }, []);
+
+  // Create a sanitized HTML render function
+  const createMarkup = (html) => {
+    return { __html: html };
+  };
 
   const sendMessage = async (e) => {
     e?.preventDefault();
@@ -135,9 +208,10 @@ function Chatbot() {
                   : "bg-gray-100 text-gray-900"
               }`}
             >
-              <div className="mb-1">
-                {msg.text}
-              </div>
+              <div 
+                className="mb-1"
+                dangerouslySetInnerHTML={createMarkup(msg.text)}
+              />
               <div className={`text-xs ${msg.sender === "user" ? "text-blue-200" : "text-gray-500"}`}>
                 {new Date(msg.timestamp).toLocaleTimeString()}
               </div>
