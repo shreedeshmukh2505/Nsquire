@@ -156,19 +156,20 @@ def find_eligible_colleges(rank, category, dataset):
             cutoffs = course.get('cutoffs', {}).get('2024', {})  # Fetch cutoffs for the year 2024
             cutoff_rank = cutoffs.get(category, None)  # Use the specified category
             if cutoff_rank and rank <= cutoff_rank:
-                eligible_branches.append((course['name'], cutoff_rank))
+                eligible_branches.append(course['name'])
 
-        # Sort branches by cutoff (descending) and take the top 2
-        eligible_branches = sorted(eligible_branches, key=lambda x: x[1])[:2]
+        # Sort branches and take the top 2
+        eligible_branches = sorted(eligible_branches)[:2]
         if eligible_branches:
             eligible_colleges.append({
                 "college": college['name'],
-                "branches": [branch[0] for branch in eligible_branches],
+                "branches": eligible_branches,
                 "rating": college['rating']
             })
 
     # Limit to 7 unique colleges
     return sorted(eligible_colleges, key=lambda x: x['rating'], reverse=True)[:7]
+
 
 # Find best college from eligible entries
 def find_best_college_and_branch(eligible_entries):
@@ -217,11 +218,18 @@ def generate_eligibility_response(eligible_entries, language='english'):
         else:
             return "Sorry, no colleges were found for your rank."
 
-    response = "Eligible colleges and top branches:\n" if language == 'english' else "Yogya college aur unke top branch:\n"
+    response = "Eligible colleges and top branches:\n\n" if language == 'english' else "Yogya college aur unke top branch:\n\n"
+    
     for entry in eligible_entries:
-        branches = ", ".join(entry['branches'])
-        response += f"{entry['college']} - {branches}\n"
-    return response
+        # Add college name
+        response += f"{entry['college']}\n"
+        # Add branches with indentation and separate them with newlines
+        for branch in entry['branches']:
+            response += f"- {branch}\n"
+        # Add extra newline after each college's complete entry
+        response += "\n"
+    
+    return response.rstrip()  # Remove trailing whitespace while preserving intended line breaks
 
 # Get cutoff details
 def get_cutoff_details(college_data, branch_name=None, year=None):
@@ -311,33 +319,62 @@ def generate_dynamic_response_eligibility(intent, language='english', rank=None,
     return "Sorry, I couldn't understand your query."
 
 # Process user query for eligibility and best college
-def process_user_query_eligibility(user_query, dataset):
-    detected_language = detect_language(user_query)
+# def process_user_query_eligibility(user_query, dataset):
+#     detected_language = detect_language(user_query)
 
-    # Step 1: Extract intent and entities using Cohere
-    ai_response = cohere_understand_query_eligibility(user_query)
-    parsed_data = parse_cohere_response_eligibility(ai_response)
+#     # Step 1: Extract intent and entities using Cohere
+#     ai_response = cohere_understand_query_eligibility(user_query)
+#     parsed_data = parse_cohere_response_eligibility(ai_response)
 
-    intent = parsed_data.get('intent', None)
-    rank = int(parsed_data['rank']) if parsed_data['rank'] and parsed_data['rank'] != 'None' else None
-    category = parsed_data['category'].upper() if parsed_data['category'] and parsed_data['category'] != 'None' else 'GOPEN'
+#     intent = parsed_data.get('intent', None)
+#     rank = int(parsed_data['rank']) if parsed_data['rank'] and parsed_data['rank'] != 'None' else None
+#     category = parsed_data['category'].upper() if parsed_data['category'] and parsed_data['category'] != 'None' else 'GOPEN'
 
-    if intent == 'eligibility' and rank is not None:
-        eligible_entries = find_eligible_colleges(rank, category, dataset)
-        return generate_dynamic_response_eligibility(intent, language=detected_language, rank=rank, category=category, dataset=dataset, eligible_entries=eligible_entries)
+#     if intent == 'eligibility' and rank is not None:
+#         eligible_entries = find_eligible_colleges(rank, category, dataset)
+#         return generate_dynamic_response_eligibility(intent, language=detected_language, rank=rank, category=category, dataset=dataset, eligible_entries=eligible_entries)
 
-    if intent == 'best_college':
-        # Reuse eligible entries from eligibility query
-        eligible_entries = find_eligible_colleges(rank if rank else 0, category, dataset)
-        return generate_dynamic_response_eligibility(intent, language=detected_language, eligible_entries=eligible_entries)
+#     if intent == 'best_college':
+#         # Reuse eligible entries from eligibility query
+#         eligible_entries = find_eligible_colleges(rank if rank else 0, category, dataset)
+#         return generate_dynamic_response_eligibility(intent, language=detected_language, eligible_entries=eligible_entries)
 
 # Add these methods at the end of the combined.py file
-
 # Main query processing function for general college queries
 def process_user_query(user_query, dataset):
     detected_language = detect_language(user_query)
 
-    # Step 1: Extract intent and entities using Cohere
+    # First, try to process as an eligibility/best college query
+    ai_response_eligibility = cohere_understand_query_eligibility(user_query)
+    parsed_data_eligibility = parse_cohere_response_eligibility(ai_response_eligibility)
+    
+    intent_eligibility = parsed_data_eligibility.get('intent', None)
+    
+    # If it's an eligibility or best_college query, process it accordingly
+    if intent_eligibility in ['eligibility', 'best_college']:
+        rank = int(parsed_data_eligibility['rank']) if parsed_data_eligibility['rank'] and parsed_data_eligibility['rank'] != 'None' else None
+        category = parsed_data_eligibility['category'].upper() if parsed_data_eligibility['category'] and parsed_data_eligibility['category'] != 'None' else 'GOPEN'
+        
+        if intent_eligibility == 'eligibility' and rank is not None:
+            eligible_entries = find_eligible_colleges(rank, category, dataset)
+            return generate_dynamic_response_eligibility(
+                intent_eligibility, 
+                language=detected_language, 
+                rank=rank, 
+                category=category, 
+                dataset=dataset, 
+                eligible_entries=eligible_entries
+            )
+        
+        if intent_eligibility == 'best_college':
+            eligible_entries = find_eligible_colleges(rank if rank else 0, category, dataset)
+            return generate_dynamic_response_eligibility(
+                intent_eligibility, 
+                language=detected_language, 
+                eligible_entries=eligible_entries
+            )
+    
+    # If not an eligibility query, process as a regular college query
     ai_response = cohere_understand_query(user_query)
     parsed_data = parse_cohere_response(ai_response)
 
@@ -346,16 +383,15 @@ def process_user_query(user_query, dataset):
     branch_name = parsed_data['branch']
     year = parsed_data['year']
 
-    # Step 2: Match college name using fuzzy matching
     college_data = match_college_name(college_name, dataset)
-
-    # If not a college-specific query, try eligibility queries
-    if not college_data and (intent == 'eligibility' or intent == 'best_college'):
-        return process_user_query_eligibility(user_query, dataset)
-
-    # Step 3: Generate response for college-specific queries
-    return generate_dynamic_response_college(intent, college_data, language=detected_language, branch=branch_name, year=year)
-
+    
+    return generate_dynamic_response_college(
+        intent, 
+        college_data, 
+        language=detected_language, 
+        branch=branch_name, 
+        year=year
+    )
 # Chatbot interaction loop
 @app.route('/chat', methods=['POST'])
 def chat():
