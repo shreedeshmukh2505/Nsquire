@@ -1,14 +1,3 @@
-Let me quickly scan the database schema and key endpoints to ensure the README is accurate and precise. I'll read the database schema file and skim the Flask routes to capture exact endpoints and behavior.
-Read file: /Users/anuragdeshmukh/Everything/EDI SEM 5/newapp/database.py
-
-Let me quickly scan the remaining Flask routes in `EDI_project_enhanced.py` to list all available endpoints precisely for the README.
-Read file: /Users/anuragdeshmukh/Everything/EDI SEM 5/newapp/EDI_project_enhanced.py
-
-Read file: /Users/anuragdeshmukh/Everything/EDI SEM 5/newapp/EDI_project_enhanced.py
-
-Read file: /Users/anuragdeshmukh/Everything/EDI SEM 5/newapp/pdf_parser.py
-
-I'll scan the database schema and Flask endpoints to make sure every command and detail below matches the code, then give you a precise README section you can paste in.
 
 ### Project Overview
 - Backend: Flask API (`EDI_project_enhanced.py`) on port 5002
