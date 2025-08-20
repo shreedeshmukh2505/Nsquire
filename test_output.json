@@ -1,0 +1,204 @@
+{
+  "college_code": "01002",
+  "college_name": "Government College of Engineering, Amravati",
+  "branches": [
+    {
+      "branch_code": "0100219110",
+      "branch_name": "Civil Engineering",
+      "status": "Government Autonomous",
+      "cutoff_data": [
+        {
+          "stage": "I",
+          "category": "GOPENS",
+          "rank": 33717,
+          "percentage": 88.6037289
+        },
+        {
+          "stage": "I",
+          "category": "GSCS",
+          "rank": 61041,
+          "percentage": 78.5613347
+        },
+        {
+          "stage": "I",
+          "category": "S",
+          "rank": 67451,
+          "percentage": 76.1358545
+        },
+        {
+          "stage": "I",
+          "category": "GSEBCS",
+          "rank": 83123,
+          "percentage": 69.7604398
+        },
+        {
+          "stage": "I",
+          "category": "LSCS",
+          "rank": 50493,
+          "percentage": 82.7086811
+        },
+        {
+          "stage": "I",
+          "category": "LVJS",
+          "rank": 52977,
+          "percentage": 81.7098306
+        },
+        {
+          "stage": "I",
+          "category": "EWS",
+          "rank": 115797,
+          "percentage": 53.7424491
+        },
+        {
+          "stage": "I",
+          "category": "PWDOPENS",
+          "rank": 33345,
+          "percentage": 88.6997043
+        },
+        {
+          "stage": "I",
+          "category": "ORPHAN",
+          "rank": 33876,
+          "percentage": 88.5551879
+        }
+      ]
+    },
+    {
+      "branch_code": "0100224210",
+      "branch_name": "Computer Science and Engineering",
+      "status": "Government Autonomous",
+      "cutoff_data": [
+        {
+          "stage": "I",
+          "category": "GSCS",
+          "rank": 11323,
+          "percentage": 96.2437396
+        },
+        {
+          "stage": "I",
+          "category": "GSEBCS",
+          "rank": 17059,
+          "percentage": 94.3331807
+        },
+        {
+          "stage": "I",
+          "category": "LOPENS",
+          "rank": 7985,
+          "percentage": 97.3461799
+        },
+        {
+          "stage": "I",
+          "category": "LSEBCS",
+          "rank": 21791,
+          "percentage": 92.7108008
+        },
+        {
+          "stage": "I",
+          "category": "TFWS",
+          "rank": 9964,
+          "percentage": 96.7229568
+        },
+        {
+          "stage": "I",
+          "category": "PWDROBCS",
+          "rank": 96341,
+          "percentage": 63.2687832
+        },
+        {
+          "stage": "I",
+          "category": "EWS",
+          "rank": 15308,
+          "percentage": 94.8964961
+        }
+      ]
+    },
+    {
+      "branch_code": "0100224610",
+      "branch_name": "Information Technology",
+      "status": "Government Autonomous",
+      "cutoff_data": [
+        {
+          "stage": "I",
+          "category": "GOBCS",
+          "rank": 8917,
+          "percentage": 97.0497898
+        },
+        {
+          "stage": "I",
+          "category": "GSEBCS",
+          "rank": 24057,
+          "percentage": 91.9492948
+        },
+        {
+          "stage": "I",
+          "category": "LOPENS",
+          "rank": 11969,
+          "percentage": 96.0392321
+        },
+        {
+          "stage": "I",
+          "category": "LSEBCS",
+          "rank": 24708,
+          "percentage": 91.7849899
+        },
+        {
+          "stage": "I",
+          "category": "TFWS",
+          "rank": 13259,
+          "percentage": 95.6320635
+        },
+        {
+          "stage": "I",
+          "category": "EWS",
+          "rank": 19241,
+          "percentage": 93.6359026
+        },
+        {
+          "stage": "VII",
+          "category": "ORPHAN",
+          "rank": 11764,
+          "percentage": 96.1353059
+        }
+      ]
+    },
+    {
+      "branch_code": "0100229310",
+      "branch_name": "Electrical Engineering",
+      "status": "Government Autonomous",
+      "cutoff_data": [
+        {
+          "stage": "I",
+          "category": "GOPENS",
+          "rank": 24135,
+          "percentage": 91.9393058
+        },
+        {
+          "stage": "I",
+          "category": "S",
+          "rank": 50339,
+          "percentage": 82.7086811
+        },
+        {
+          "stage": "I",
+          "category": "S",
+          "rank": 44865,
+          "percentage": 84.5731157
+        },
+        {
+          "stage": "I",
+          "category": "TFWS",
+          "rank": 12755,
+          "percentage": 95.7978793
+        },
+        {
+          "stage": "I",
+          "category": "EWS",
+          "rank": 75966,
+          "percentage": 72.7750912
+        }
+      ]
+    }
+  ],
+  "total_branches": 4,
+  "parsing_success": true
+}
