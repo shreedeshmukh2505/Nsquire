@@ -14,18 +14,6 @@
 - Optional: Cohere API key in `.env`
 
 ### Installation
-- Create and activate a Python env (choose one):
-
-```bash
-# Option A: venv
-cd /Users/anuragdeshmukh/Everything/EDI\ SEM\ 5/newapp
-python3 -m venv .venv
-source .venv/bin/activate
-
-# Option B: conda
-conda create -n edi python=3.11 -y
-conda activate edi
-```
 
 - Install Python dependencies:
 
@@ -36,7 +24,6 @@ pip install flask flask-cors PyPDF2 pandas openpyxl fuzzywuzzy python-Levenshtei
 - Install and prepare Ollama (local LLM):
 
 ```bash
-# Use the helper script (recommended)
 bash install_ollama.sh
 
 # Or manually:
@@ -53,7 +40,6 @@ ollama pull gemma3:1b
 
 ### Run the Backend
 ```bash
-cd /Users/anuragdeshmukh/Everything/EDI\ SEM\ 5/newapp
 python3 EDI_project_enhanced.py
 ```
 - Server: http://localhost:5002
@@ -156,7 +142,6 @@ python3 test_real_pdf.py
 
 ### Frontend (React)
 ```bash
-cd /Users/anuragdeshmukh/Everything/EDI\ SEM\ 5/newapp
 npm install
 npm start
 ```
@@ -180,12 +165,10 @@ python3 test_pdf_parser.py
 ### Running Everything Together
 1) Start backend:
 ```bash
-cd /Users/anuragdeshmukh/Everything/EDI\ SEM\ 5/newapp
 python3 EDI_project_enhanced.py
 ```
 2) Start frontend in a new terminal:
 ```bash
-cd /Users/anuragdeshmukh/Everything/EDI\ SEM\ 5/newapp
 npm start
 ```
 3) Optional: Upload PDF to populate DB, then chat from the frontend.
@@ -218,36 +201,3 @@ python3 EDI_project_enhanced.py
 - Frontend: `src/` and `package.json`
 - README docs: `ENHANCED_CHATBOT_README.md`
 
-### Suggested README Additions
-- Example screenshots of:
-  - Successful `/upload-pdf` response
-  - `/database-stats` after parsing
-  - Chat replies for college and general queries
-- Performance notes:
-  - Parser is optimized for large PDFs (1400+ pages); uses robust regex and staged extraction
-- Data provenance:
-  - Mention the source/format of PDF if public
-
-- Added improvements:
-  - Clean output formatting for chat responses
-  - Helpful tips appended to responses for user guidance
-
-- Security:
-  - This is a dev server; use a production WSGI server for deployment
-
-- License/Contributors: As applicable
-
-- Model note:
-  - Local LLM: `gemma3:1b` via Ollama on `localhost:11434`
-  - Cohere fallback: optional, used when local model unavailable
-
-- Frontend integration:
-  - Ensure `Chatbot.jsx` and any upload components point to port 5002
-
-- Logging:
-  - `logging` is used throughout; enable debug in `pdf_parser.py` if needed
-
-- CORS:
-  - Enabled globally for convenience (`flask_cors`)
-
-That’s everything you need to run and test the full stack and to document it precisely in your README.
